@@ -9,10 +9,6 @@ body {
   font-family: var(--default-font-family);
 }
 
-nav {
-  padding: 20px;
-}
-
 nav ul {
   padding: 0;
   margin: 0;
@@ -22,18 +18,12 @@ nav li {
   display: inline;
   list-style: none;
   line-height: 42px;
-  margin-left: 15px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #272142;
-  transition: all 100ms ease-in-out;
+  font-weight: bold;
 }
 
 nav a:hover,
-nav li.active a {
-  color: var(--branding-color);
+nav a.active {
+  color: var(--branding-color) !important;
 }
 
 h1,
@@ -109,10 +99,20 @@ footer .social-links a:hover {
   max-height: 40px;
 }
 
+.nav-item {
+  padding: 0 15px;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+  text-decoration: none;
+  color: #272142;
+  transition: all 100ms ease-in-out;
+}
+
 .hero {
   background: var(--secondary-color);
   text-align: center;
-  padding: 80px 20px;
+  padding: 120px 20px 60px;
 }
 
 .hero p {
@@ -148,12 +148,22 @@ footer .social-links a:hover {
   border: 1px solid var(--branding-color);
 }
 
+.btn-branding-outline:hover {
+  background: var(--branding-color);
+  color: white;
+}
+
+.btn-branding:hover {
+  color: var(--branding-color);
+  border: 1px solid var(--branding-color);
+}
+
 .project-description {
   padding: 120px 60px;
 }
 
 .content-container {
-  padding: 60px 20px;
+  padding: 120px 20px 60px;
 }
 
 .content {
@@ -193,12 +203,13 @@ footer .social-links a:hover {
     font-size: 26px;
   }
 
-  nav a {
-    font-size: 12px;
-  }
-
   nav li {
     margin-left: 10px;
+    line-height: 20px;
+  }
+
+  nav a {
+    font-size: 12px;
   }
 
   .project-description {
@@ -209,5 +220,14 @@ footer .social-links a:hover {
   .content {
     text-align: center;
     padding: 0;
+  }
+
+  .content h1 {
+    font-size: 44px;
+    line-height: 1.5;
+  }
+
+  .content-container {
+    padding: 60px;
   }
 }
